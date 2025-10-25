@@ -1,0 +1,70 @@
+.card-container {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    width: 100vw;
+    background:white;
+    position: relative;
+    backdrop-filter: blur(3px);
+    height: 400px;
+  }
+
+
+  
+  .card {
+    width: 100%;
+    overflow: hidden;
+    display: flex;
+    background: transparent;
+    margin-top: 5rem;
+   
+  }
+  
+  .logos {
+    display: flex;
+    white-space: nowrap;
+    flex-shrink: 0;
+    animation: slide-left 20s linear infinite;
+  
+   
+  }
+  
+  .logos span {
+    display: flex;
+  }
+  
+  .logos img {
+    height: 80px; /* adjust logo size */
+    margin-right: 4rem; /* gap between logos */
+    object-fit: contain;
+    box-shadow: 0 0 20px rgba(52, 152, 219, 0.7);
+  }
+  
+  /* Left-moving marquee */
+  @keyframes slide-left {
+    0% {
+      transform: translateX(0);
+    }
+    100% {
+      transform: translateX(-50%);
+    }
+  }
+  
+  /* Right-moving marquee */
+  .logos.reverse {
+    animation: slide-right 20s linear infinite;
+  }
+  
+  @keyframes slide-right {
+    0% {
+      transform: translateX(-50%);
+    }
+    100% {
+      transform: translateX(0);
+    }
+  }
+
+  h1{
+    text-align: center;
+  }
+  

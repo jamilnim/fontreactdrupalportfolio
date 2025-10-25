@@ -1,0 +1,100 @@
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  width: 100vw;
+}
+
+/* ✅ MOBILE FIRST (default) */
+.container {
+  width: 100vw;
+  background-color: black;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: auto;
+  margin: 0;
+}
+
+.sideButton {
+  width: 100%;
+  height: auto;
+  margin-bottom: 1.5rem;
+  box-sizing: border-box;
+  position: relative;
+  overflow: hidden;
+}
+
+.aboutmeHeading {
+  text-align: center;
+  background-color: black;
+  color: white;
+  margin: 0;
+  padding-top: 3rem;
+  font-size: 1.6em;
+  width: 100vw;
+}
+
+.aboutmeContent {
+  width: 80%;
+  margin: 0;
+  color: white;
+  font-size: 1em;
+  text-align: justify;
+}
+
+/* ✅ TABLET SMALL (>=480px) */
+@media (min-width: 480px) {
+  .aboutmeHeading {
+    font-size: 2em;
+    padding-top: 4rem;
+  }
+
+  .aboutmeContent {
+    font-size: 0.95em;
+  }
+}
+
+/* ✅ TABLET MEDIUM (>=768px) */
+@media (min-width: 768px) {
+  .sideButton {
+    width: 80%;
+    height: 90%;
+  }
+
+  .aboutmeContent {
+    width: 80%;
+  }
+
+  .aboutmeHeading {
+    font-size: 2.5em;
+  }
+}
+
+/* ✅ DESKTOP (>=1024px) */
+@media (min-width: 1024px) {
+  .container {
+    flex-direction: row;
+    height: 30rem;
+    padding: 3rem;
+  }
+
+  .sideButton {
+    width: 45%;
+    height: 90%;
+  }
+
+  .aboutmeHeading {
+    font-size: 3em;
+    padding-top: 6rem;
+    padding-left: 3rem;
+    padding-right: 3rem;
+  }
+
+  .aboutmeContent {
+    width: 40%;
+    margin: 2rem;
+    font-size: 0.8em;
+  }
+}

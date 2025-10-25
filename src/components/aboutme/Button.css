@@ -1,0 +1,33 @@
+.hacker-button::before {
+  position: absolute;
+  content: " ";
+  display: block;
+  width: 200%;
+  height: 400%;
+  background: linear-gradient(
+    90deg,
+    transparent,
+    #7c7aec,
+    #3c8de9,
+    #a3a1f6,
+    #51b1f9,
+    transparent
+  );
+  animation: rotation_481 5000ms infinite linear;
+  border: solid 4px lightblue;
+
+}
+
+@keyframes rotation_481 {
+  0% {
+    transform: rotateZ(0deg);
+  }
+  100% {
+    transform: rotateZ(360deg);
+  }
+}
+
+button-container {
+  align-items: center;
+ 
+}

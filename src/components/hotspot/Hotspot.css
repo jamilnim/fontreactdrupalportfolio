@@ -1,0 +1,357 @@
+html {
+  scroll-behavior: smooth;
+}
+
+/* ✅ MOBILE-FIRST BASE */
+.hotsport-container {
+  display: flex;
+  flex-direction: column; /* stack on mobile */
+  align-items: center;
+  min-width: 100%;
+  min-height: 100vh;
+  padding: 3;
+  position: relative;
+  z-index: 1;
+  background-color: black;
+  text-align: center;
+  overflow: hidden;
+}
+
+.hotsportpic img {
+  width: 90vw;
+  max-width: 400px;
+  height: auto;
+  object-fit: cover;
+  margin: 0 auto;
+}
+
+.hotsporttext {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 2rem;
+  font-size: .7em;
+}
+
+.hotspaceLogo {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  margin-bottom: 2rem;
+}
+
+.hotspaceLogoimg {
+  width: 10rem;
+  height: 10rem;
+  object-fit: cover;
+  border-radius: 50%;
+  transition: transform 1.5s ease-in-out, box-shadow 0.5s ease;
+}
+
+.hotspaceLogoimg:hover {
+  transform: rotate(80deg) scale(1.05);
+  box-shadow: 0 0 25px 6px rgba(255, 255, 255, 0.8);
+}
+
+.heading {
+  font-size: 2em;
+  color: white;
+  width: 90%;
+  text-align: center;
+  line-height: 1.2;
+  margin-bottom: 2rem;
+}
+
+.Btncontainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 100%;
+  align-items: center;
+}
+
+.hotspotButton {
+  position: relative;
+  padding: 14px 42px;
+  font-size: 1.1rem;
+  font-weight: bold;
+  border: solid 2px goldenrod;
+  cursor: pointer;
+  overflow: hidden;
+  background: transparent;
+  display: inline-block;
+  z-index: 1;
+  transition: transform 0.2s ease;
+  margin: 1rem 0;
+  width: 80%;
+  max-width: 300px;
+}
+
+a {
+  text-align: center;
+  color: white;
+  text-decoration: none;
+  width: 100%;
+  display: inline-block;
+}
+
+.button span {
+  position: relative;
+  z-index: 15;
+}
+
+.button:active {
+  transform: scale(0.96);
+}
+
+.button:hover::before {
+  opacity: 1;
+  transform: scale(1);
+}
+
+/* BUBBLES (unchanged) */
+.bubble-layer {
+  position: absolute;
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  filter: blur(20px);
+  z-index: 0;
+  opacity: 30%;
+}
+
+.bubble-1 {
+  background: #0622f3;
+  top: -20%;
+  left: -10%;
+  animation: moveUpRight 30s ease-in-out infinite;
+}
+.bubble-2 {
+  background: #3c1ed4;
+  top: 0%;
+  left: 10%;
+  animation: moveDownLeft 35s ease-in-out infinite;
+  animation-delay: 34s;
+}
+.bubble-3 {
+  background: #0bcbf2;
+  top: 20%;
+  left: 50%;
+  animation: moveRight 4s ease-in-out infinite;
+  animation-delay: 38s;
+}
+.bubble-4 {
+  background: #ffffff;
+  top: -20%;
+  left: 70%;
+  animation: moveUpLeft 7s ease-in-out infinite;
+  animation-delay: 37s;
+}
+.bubble-5 {
+  background: #474aa4;
+  top: 30%;
+  left: -10%;
+  animation: moveDownRight 36s ease-in-out infinite;
+  animation-delay: 34s;
+}
+.bubble-6 {
+  background: #02385c;
+  top: -10%;
+  left: 30%;
+  animation: moveLeft 38s ease-in-out infinite;
+  animation-delay: 33s;
+}
+.bubble-7 {
+  background: #0a2239;
+  top: 40%;
+  left: 60%;
+  animation: moveUp 36s ease-in-out infinite;
+  animation-delay: 35s;
+}
+
+/* ✅ TABLET */
+@media (min-width: 768px) {
+  .heading {
+    width: 70%;
+    font-size: 2rem;
+  }
+
+  .hotspotButton {
+    width: 18rem;
+    font-size: 1.1rem;
+  }
+
+  .bubble-layer {
+    width: 120px;
+    height: 120px;
+    filter: blur(25px);
+  }
+}
+
+/* ✅ DESKTOP (original layout restored) */
+@media (min-width: 1024px) {
+  .hotsport-container {
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+   padding-left: 3rem;
+   padding-right: 3rem;
+   padding-top: 0;
+    text-align: left;
+    
+  }
+
+  .hotsportpic img {
+    width: 30vw;
+    height: 40rem;
+    margin-left: 10rem;
+  }
+
+  .hotsporttext {
+    align-items: flex-end;
+  }
+
+  .heading {
+    width: 50vw;
+    font-size: 3em;
+    text-align: right;
+    margin-right: 4rem;
+  }
+
+  .Btncontainer {
+    flex-direction: row;
+  }
+
+  .hotspotButton {
+    width: 22rem;
+    margin: 1rem;
+  }
+
+  .bubble-layer {
+    width: 150px;
+    height: 150px;
+    filter: blur(30px);
+  }
+}
+
+/* ANIMATIONS (unchanged) */
+@keyframes moveUpRight {
+  0% {
+    transform: translate(0, 0);
+  }
+  25% {
+    transform: translate(100%, -100%);
+  }
+  50% {
+    transform: translate(-50%, 50%);
+  }
+  75% {
+    transform: translate(50%, -50%);
+  }
+  100% {
+    transform: translate(0, 0);
+  }
+}
+@keyframes moveDownLeft {
+  0% {
+    transform: translate(0, 0);
+  }
+  25% {
+    transform: translate(-100%, 100%);
+  }
+  50% {
+    transform: translate(50%, -50%);
+  }
+  75% {
+    transform: translate(-50%, 50%);
+  }
+  100% {
+    transform: translate(0, 0);
+  }
+}
+@keyframes moveRight {
+  0% {
+    transform: translate(0, 0);
+  }
+  25% {
+    transform: translate(100%, 0);
+  }
+  50% {
+    transform: translate(-100%, 50%);
+  }
+  75% {
+    transform: translate(50%, -50%);
+  }
+  100% {
+    transform: translate(0, 0);
+  }
+}
+@keyframes moveUpLeft {
+  0% {
+    transform: translate(0, 0);
+  }
+  25% {
+    transform: translate(-100%, -100%);
+  }
+  50% {
+    transform: translate(50%, 50%);
+  }
+  75% {
+    transform: translate(-50%, -50%);
+  }
+  100% {
+    transform: translate(0, 0);
+  }
+}
+@keyframes moveDownRight {
+  0% {
+    transform: translate(0, 0);
+  }
+  25% {
+    transform: translate(100%, 100%);
+  }
+  50% {
+    transform: translate(-50%, -50%);
+  }
+  75% {
+    transform: translate(50%, 50%);
+  }
+  100% {
+    transform: translate(0, 0);
+  }
+}
+@keyframes moveLeft {
+  0% {
+    transform: translate(0, 0);
+  }
+  25% {
+    transform: translate(-100%, 0);
+  }
+  50% {
+    transform: translate(100%, -50%);
+  }
+  75% {
+    transform: translate(-50%, 50%);
+  }
+  100% {
+    transform: translate(0, 0);
+  }
+}
+@keyframes moveUp {
+  0% {
+    transform: translate(0, 0);
+  }
+  25% {
+    transform: translate(0, -100%);
+  }
+  50% {
+    transform: translate(50%, 50%);
+  }
+  75% {
+    transform: translate(-50%, -50%);
+  }
+  100% {
+    transform: translate(0, 0);
+  }
+}

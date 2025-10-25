@@ -1,0 +1,87 @@
+/* ✅ MOBILE FIRST (default) */
+.strength-section {
+  background-color: #000000;
+  padding: 2rem 1.5rem;
+  text-align: center;
+  width: 100vw;
+}
+
+.strength-title {
+  font-size: 1.6rem;
+  margin-bottom: 2rem;
+  color: #ffffff;
+}
+
+.strength-title span {
+  padding: 0.1rem 0.5rem;
+  border-radius: 4px;
+}
+
+.chart-row {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.5rem;
+}
+
+.strength-card {
+  background: #000000;
+  border-radius: 16px;
+  padding: 1.5rem;
+  box-shadow: 0 6px 16px white;
+  width: 100%;
+  max-width: 350px;
+  height: auto;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: white;
+}
+
+.strength-card.bar,
+.strength-card.line {
+  padding: 1rem;
+}
+
+/* ✅ TABLET (>= 600px) */
+@media (min-width: 600px) {
+  .strength-title {
+    font-size: 1.8rem;
+  }
+
+  .strength-section{
+    padding: 0;
+  }
+
+  .strength-card {
+    max-width: 400px;
+    height: 450px;
+  }
+}
+
+/* ✅ DESKTOP (>= 1024px) */
+@media (min-width: 1024px) {
+  .strength-section {
+    padding: 4rem 3rem;
+  }
+
+  .strength-title {
+    font-size: 2rem;
+    margin-bottom: 2.5rem;
+  }
+
+  .chart-row {
+    flex-direction: row;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 2rem;
+  }
+
+  .strength-card {
+    width: 30%;
+    min-width: 280px;
+    height: 470px;
+    padding: 2rem;
+  }
+}
