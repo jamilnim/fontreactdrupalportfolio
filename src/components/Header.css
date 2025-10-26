@@ -10,7 +10,7 @@ html {
   top: 0;
   width: 100vw;
   height: 12rem;
-  background-image: url(../assets/background/hotsportbackground.jpg);
+  background-image: url(../assets/background/headerbackground.jpg);
   background-size: cover;
   background-position: center;
   z-index: 10;
@@ -83,7 +83,7 @@ html {
     top: 0;
     width: 100vw;
     height: 12rem;
-    background-image: url(../assets/background/hotsportbackground.jpg);
+    background-image: url(../assets/background/headerbackground.jpg);
     background-size: cover;
     background-position: center;
     z-index: 10;
