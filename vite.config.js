@@ -5,13 +5,12 @@ import path from "path";
 export default defineConfig({
   plugins: [react()],
   resolve: {
-    alias: {
-      "@": path.resolve(__dirname, "./src"), // allows @/assets/...
-    },
-    dedupe: ["react", "react-dom", "react-router-dom"],
-    extensions: [".js", ".jsx", ".ts", ".tsx"],
+    alias: { "@": path.resolve(__dirname, "./src") },
+    extensions: [".js", ".jsx", ".ts", ".tsx"]
   },
   build: {
-    outDir: "dist",
+    rollupOptions: {
+      external: ["styled-components"], // ✅ tells Rollup not to bundle it
+    },
   },
 });
