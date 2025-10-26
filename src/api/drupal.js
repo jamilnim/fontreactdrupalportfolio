@@ -1,5 +1,6 @@
 const baseFromEnv = import.meta.env.VITE_DRUPAL_BASE?.trim();
 export const BASE = baseFromEnv || "https://dev-jamilportfolio.pantheonsite.io";
+console.log("🔗 Using Drupal API base:", BASE);
 
 
 function extractUrl(linkField) {
