@@ -1,4 +1,6 @@
-const BASE = import.meta.env.VITE_DRUPAL_BASE || "https://dev-jamilportfolio.pantheonsite.io";
+const baseFromEnv = import.meta.env.VITE_DRUPAL_BASE?.trim();
+export const BASE = baseFromEnv || "https://dev-jamilportfolio.pantheonsite.io";
+
 
 function extractUrl(linkField) {
   if (!linkField) return "";

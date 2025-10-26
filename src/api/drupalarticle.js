@@ -1,9 +1,12 @@
-const BASE = import.meta.env.VITE_DRUPAL_BASE || "https://dev-jamilportfolio.pantheonsite.io";
+const baseFromEnv = import.meta.env.VITE_DRUPAL_BASE?.trim();
+export const BASE = baseFromEnv || "https://dev-jamilportfolio.pantheonsite.io";
 
 export async function fetchArticles() {
   // ✅ Include image relationship (even if null, safe)
-  const response = await fetch(`${BASE}/jsonapi/node/article?include=field_image`);
-  
+  const response = await fetch(
+    `${BASE}/jsonapi/node/article?include=field_image`
+  );
+
   if (!response.ok) {
     throw new Error("Failed to fetch articles");
   }
