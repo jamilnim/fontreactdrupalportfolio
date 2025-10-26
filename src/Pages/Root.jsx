@@ -1,9 +1,9 @@
 import React from "react";
 
 import { Outlet } from "react-router";
-import Footer from "../components/footer/Footer";
+import Footer from "../components/footer/Footer.jsx";
 import "./Root.css";
-import Header from "../components/Header";
+import Header from "../components/Header.jsx";
 
 function Root() {
   return (
