@@ -1,5 +1,5 @@
 import React from "react";
-import styled from "styled-components";
+import styled from "styled-components/macro";
 import "./Button.css";
 
 const Button = () => {
@@ -112,7 +112,6 @@ const StyledWrapper = styled.div`
     min-height: 100%;
     position: relative;
     z-index: 1;
- 
   }
 
   /* Main button styles */
