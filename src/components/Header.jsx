@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import "./Header.css";
-import logo from "../../assets/background/logo.png";
+import logo from "../assets/background/logo.png" 
 import { useNavigate, useLocation } from "react-router-dom";
 import { Menu, X } from "lucide-react"; // for mobile menu icons
 
